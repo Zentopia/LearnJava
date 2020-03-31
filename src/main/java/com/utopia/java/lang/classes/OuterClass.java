@@ -11,6 +11,14 @@ public class OuterClass {
         return outerName;
     }
 
+    private void getLocalInnerObj(){
+        class LocalInnerClass{
+
+        }
+
+        LocalInnerClass localInnerClass = new LocalInnerClass();
+    }
+
     public class InnerClass {
 
         private String getrName(){
@@ -31,6 +39,14 @@ public class OuterClass {
         OuterClass outerObj = new OuterClass();
         InnerClass innerClass = outerObj.new InnerClass();
         return innerClass;
+    }
+
+    public AnonymousInnerClass createAnonymousClass(){
+        return () -> System.out.println("Hello world");
+    }
+
+    interface AnonymousInnerClass{
+        void print();
     }
 
 }
