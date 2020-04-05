@@ -7,7 +7,7 @@ import java.util.concurrent.FutureTask;
 /**
  * @author utopia on 2020/3/31
  */
-public class Thead {
+public class LearnThead {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
