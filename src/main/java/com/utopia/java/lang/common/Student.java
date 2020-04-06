@@ -5,28 +5,39 @@ package com.utopia.java.lang.common;
  */
 public class Student {
 
-    public synchronized void waiting() throws InterruptedException {
+    public synchronized void waiting()  {
 
         System.out.println("I am waiting");
-        wait();
+        try {
+            wait();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("I am finish waiting");
     }
 
     public synchronized void sleep(){
         System.out.println("I am sleeping");
         try {
-            Thread.sleep(1000000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         System.out.println("I wake up");
-//        notify();
+        notify();
 
     }
 
     public synchronized void goToBed(){
         System.out.println("go to bed");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("I get up");
+
     }
 
 

@@ -12,11 +12,7 @@ public class SleepAndWait {
         Student student = new Student();
 
         Thread waitingThread = new Thread(() -> {
-            try {
                 student.waiting();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         });
 
         Thread sleep = new Thread(() -> {
@@ -29,16 +25,10 @@ public class SleepAndWait {
 
         waitingThread.start();
         sleep.start();
-//        goToBedThread.start();
+        goToBedThread.start();
 
-//        waitingThread.interrupt();
-
-        Thread.sleep(5000);
-//        waitingThread.interrupt();
-        sleep.interrupt();
         waitingThread.interrupt();
-
-//        goToBedThread.interrupt();
+        System.out.println("end");
 
     }
 }
