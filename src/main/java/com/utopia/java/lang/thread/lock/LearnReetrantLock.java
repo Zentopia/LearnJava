@@ -1,4 +1,4 @@
-package com.utopia.java.lang.thread;
+package com.utopia.java.lang.thread.lock;
 
 import com.utopia.java.lang.common.Student;
 
