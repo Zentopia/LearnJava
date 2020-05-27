@@ -24,9 +24,9 @@ public class LearnVolatile {
             t.start();
         }
 
-//        for (Thread t : threads) {
-//            t.join();
-//        }
+        for (Thread t : threads) {
+            t.join();
+        }
 
         System.out.println(m);
     }
